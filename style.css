@@ -54,6 +54,11 @@ pre {
   padding: 10px;
   border-radius: 5px;
   overflow-x: auto;
+  user-select: none;        
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none;     
 }
 .bloco {
   margin-bottom: 20px;
