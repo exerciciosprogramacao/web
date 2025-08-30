@@ -110,7 +110,13 @@ body.dark a {
     .tit{
       text-align: center;
     }
-
+    .download{
+      font-size: large; 
+    }
+    .download:hover{
+      color:#999292;
+      
+    }
     @media (max-width: 768px) {
       img{
         max-width: 300px;

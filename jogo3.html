@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios</title>
+  <link rel="stylesheet" href="jogo3.css">
+  <link rel="icon" type="image/png" href="./img/logo.png">
+</head>
+<body>
+  <div class="btt">
+    <button class="avancar" onclick="toggleDarkMode()">👓</button>
+  </div>
+  
+  <h1>📘 Documentação do Projeto - Cadastro de Pessoas</h1>
+
+  <div class="image">
+    <img src="./img/objeto.PNG" alt="">
+  </div>
+
+  <div class="bloco">
+    <h2>🎯 Objetivo do Projeto</h2>
+    <pre>
+- Criar um sistema de cadastro de pessoas, onde informações como nome, e-mail e idade são inseridas em um formulário.
+- Cada nova pessoa cadastrada será exibida em um "card" na tela.
+- O formulário deve ser limpo após o envio e os dados armazenados em uma lista.
+
+<a class="download" href="./projeto3/style.css" download>💾 Clique aqui para baixar o Css</a>
+    </pre>
+    <p class="explicacao">👉 Este exercício ensina como trabalhar com formulários e manipulação de DOM usando JavaScript.</p>
+  </div>
+  
+  <div class="bloco">
+    <h2>🧱 2. Selecionando os Elementos</h2>
+    <pre>
+// Como selecionar o formulário de cadastro?
+const [📮] = document.getElementById('[......]');
+  
+// Como selecionar a área onde os cards serão exibidos?
+const [📦] = document.getElementById('[......]');
+    </pre>
+    <p class="explicacao">👉 Aqui, usamos getElementById para selecionar os elementos do HTML, como o formulário e a área onde os cards serão exibidos.</p>
+  </div>
+
+  <div class="bloco">
+    <h2>🧱 1. Declarando a Lista de Pessoas</h2>
+    <pre>
+// Declarando a lista onde as pessoas serão armazenadas
+let [📑] = [];
+    </pre>
+    <p class="explicacao">👉 A variável [📑] é um array vazio que armazenará os objetos das pessoas cadastradas. A cada envio de formulário, um novo objeto será adicionado à lista.</p>
+  </div>
+  
+  <div class="bloco">
+    <h2>🖱️ 3. Detectando o Envio do Formulário</h2>
+    <pre>
+// Adicionando um ouvinte de evento para o envio do formulário
+[📮].addEventListener('[...]', function([🎲]) {
+  // Aqui dentro você programará o que acontece ao enviar o formulário.
+});
+    </pre>
+    <p class="explicacao">👉 O addEventListener é usado para escutar o evento de envio do formulário. O parâmetro [🎲] normalmente é chamado de <strong>event</strong> e representa o evento que queremos capturar (neste caso, submit).</p>
+  </div>
+  
+  <div class="bloco">
+    <h2>❌ 4. Prevenindo o Comportamento Padrão</h2>
+    <pre>
+// Prevenindo que o formulário recarregue a página
+[🎲].preventDefault();
+    </pre>
+    <p class="explicacao">👉 O preventDefault evita que a página seja recarregada ao enviar o formulário, algo que acontece por padrão com o evento submit.</p>
+  </div>
+
+  <div class="bloco">
+    <h2>✅ 5. Coletando os Dados do Formulário</h2>
+    <pre>
+// Coletando os valores dos campos do formulário
+const [📚] = document.getElementById('[......]').value;
+const [🧰] = document.getElementById('[......]').value;
+const [📦] = document.getElementById('[......]').value;
+    </pre>
+    <p class="explicacao">👉 Usamos `getElementById` para acessar os valores inseridos pelo usuário nos campos de nome, e-mail e idade.</p>
+  </div>
+
+  <div class="bloco">
+    <h2>🧼 6. Criando o Objeto com os Dados</h2>
+    <pre>
+// Criando um objeto com os dados coletados
+const [🙍‍♂️] = {
+  nome: [📚],
+  email: [🧰],
+  idade: [📦]
+};
+    </pre>
+    <p class="explicacao">👉 O objeto [🙍‍♂️] é criado para armazenar os dados inseridos pelo usuário no formulário. Isso ajuda a organizar os dados de forma estruturada.</p>
+  </div>
+  
+  <div class="bloco">
+    <h2>👁️ 7. Adicionando o Objeto à Lista, chamando a função e resetando formulário</h2>
+    <pre>
+// Adicionando o objeto à lista de pessoas
+[📑].push([🙍‍♂️]);
+exibirCards();
+📮.reset();
+    </pre>
+    <p class="explicacao">👉 A função javaScript "push" adiciona o objeto [🙍‍♂️] à lista de pessoas [📑], armazenando todos os cadastros realizados.</p>
+    <p class="explicacao">👉 exibirCards() é uma função, ainda não criamos ela, ela vai servir para mostrar os cards.</p>
+    <p class="explicacao">👉 📮.reset() é uma função javaScript para resetar os campos do formulários</p>
+  </div>
+  
+  <div class="bloco">
+    <h2>🔍 8. Função de Exibir os Cards</h2>
+    <pre>
+function exibirCards()
+[📦].innerHTML = '';
+
+// Para cada pessoa, criamos um card
+[📑].forEach([📚] => {
+  const [🎴] = document.createElement('div');
+  [🎴].classList.add('[......]');
+  [🎴].innerHTML = 
+        &lt;h3&gt; + [📚].nome + &lt;/h3&gt; +
+        &lt;p&gt;Email:  + [📚].email + &lt;/p&gt; +
+        &lt;p&gt;Idade:  + [📚].idade + &lt;/p&gt;;
+
+  
+  // Adicionando o card à área de exibição
+  [📦].appendChild([🎴]);
+});
+    </pre>
+    <p class="explicacao">👉 Aqui, usamos forEach para percorrer a lista de pessoas [📑] e criar um card para cada item da lista. Cada card é adicionado ao container de cards [📦].</p>
+  </div>
+
+  <div class="bt">
+    <button class="voltar">
+      <a href="./jogo2.html">Voltar</a>
+  </button>
+    <button class="avancar">
+      <a href="./jogo11.html">Avançar</a>
+  </button>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
