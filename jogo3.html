@@ -111,22 +111,23 @@ exibirCards();
   <div class="bloco">
     <h2>🔍 8. Função de Exibir os Cards</h2>
     <pre>
-function exibirCards()
-[📦].innerHTML = '';
-
-// Para cada pessoa, criamos um card
-[📑].forEach([📚] => {
-  const [🎴] = document.createElement('div');
-  [🎴].classList.add('[......]');
-  [🎴].innerHTML = 
-        &lt;h3&gt; + [📚].nome + &lt;/h3&gt; +
-        &lt;p&gt;Email:  + [📚].email + &lt;/p&gt; +
-        &lt;p&gt;Idade:  + [📚].idade + &lt;/p&gt;;
-
+function exibirCards(){
+  [📦].innerHTML = '';
   
-  // Adicionando o card à área de exibição
-  [📦].appendChild([🎴]);
-});
+  // Para cada pessoa, criamos um card
+  [📑].forEach([📚] => {
+    const [🎴] = document.createElement('div');
+    [🎴].classList.add('[......]');
+    [🎴].innerHTML = 
+          &lt;h3&gt; + [📚].nome + &lt;/h3&gt; +
+          &lt;p&gt;Email:  + [📚].email + &lt;/p&gt; +
+          &lt;p&gt;Idade:  + [📚].idade + &lt;/p&gt;;
+  
+    
+    // Adicionando o card à área de exibição
+    [📦].appendChild([🎴]);
+  });
+}
     </pre>
     <p class="explicacao">👉 Aqui, usamos forEach para percorrer a lista de pessoas [📑] e criar um card para cada item da lista. Cada card é adicionado ao container de cards [📦].</p>
   </div>
@@ -143,3 +144,4 @@ function exibirCards()
   <script src="./script.js"></script>
 </body>
 </html>
+
